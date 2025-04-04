@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  order-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+html body {
+  color: rgba(255, 255, 255, 0.8705882353);
+  background-color: #191919;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.007) 2px, transparent 2px), linear-gradient(90deg, rgba(255, 255, 255, 0.007) 2px, transparent 1px), linear-gradient(rgba(255, 255, 255, 0.007) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.007) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  width: 100%;
+  height: 100%;
+}
+html body .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.text {
+  font-family: "Hanken Grotesk";
+  font-size: 20px;
+  font-weight: 100;
+  transition: 0.2s;
+}
+.text:hover {
+  scale: 1.05;
+}
+
+.copyright {
+  font-family: "Hanken Grotesk";
+  opacity: 0.4;
+  position: absolute;
+  bottom: 20px;
+  width: 300px;
+  text-align: center;
+  font-weight: 100;
+  left: calc(50% - 150px);
+  font-size: 15px;
+  transition: 0.2s;
+}
+.copyright:hover {
+  scale: 1.05;
+}
+
+.loader {
+  color: #fff;
+  font-family: Consolas, Menlo, Monaco, monospace;
+  font-weight: bold;
+  font-size: 78px;
+  opacity: 0.8;
+  transition: 0.6s;
+}
+.loader:hover {
+  scale: 1.2;
+}
+.loader:before {
+  content: "{";
+  display: inline-block;
+  animation: pulse 0.7s alternate infinite ease-in-out;
+}
+.loader::after {
+  content: "}";
+  display: inline-block;
+  animation: pulse 0.7s 0.6s alternate infinite ease-in-out;
+}
+
+@keyframes pulse {
+  to {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+/*# sourceMappingURL=style-min.css.map */
