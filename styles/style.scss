@@ -85,6 +85,33 @@ html {
     }
 }
 
+.buttons {
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    a {
+        width: 120px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        font-family: "Hanken Grotesk";
+        text-decoration: none;
+        color: #ffffffde;
+        border-radius: 10px;
+        border: 1px solid #ffffffde;
+        transition: .2s;
+
+        &:hover{
+            color: rgb(36, 36, 36);
+            background-color: #ffffffde;
+        }
+    }
+}
+
 .loader {
     color: #fff;
     font-family: Consolas, Menlo, Monaco, monospace;

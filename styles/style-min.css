@@ -73,6 +73,31 @@ html body .container {
   scale: 1.05;
 }
 
+.buttons {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.buttons a {
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-family: "Hanken Grotesk";
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8705882353);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.8705882353);
+  transition: 0.2s;
+}
+.buttons a:hover {
+  color: rgb(36, 36, 36);
+  background-color: rgba(255, 255, 255, 0.8705882353);
+}
+
 .loader {
   color: #fff;
   font-family: Consolas, Menlo, Monaco, monospace;
