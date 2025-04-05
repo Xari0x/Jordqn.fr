@@ -47,16 +47,6 @@ html body .container {
   gap: 20px;
 }
 
-.text {
-  font-family: "Hanken Grotesk";
-  font-size: 20px;
-  font-weight: 100;
-  transition: 0.2s;
-}
-.text:hover {
-  scale: 1.05;
-}
-
 .copyright {
   font-family: "Hanken Grotesk";
   opacity: 0.4;
@@ -71,60 +61,6 @@ html body .container {
 }
 .copyright:hover {
   scale: 1.05;
-}
-
-.buttons {
-  width: 300px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-.buttons a {
-  width: 120px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  font-family: "Hanken Grotesk";
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.8705882353);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.8705882353);
-  transition: 0.2s;
-}
-.buttons a:hover {
-  color: rgb(36, 36, 36);
-  background-color: rgba(255, 255, 255, 0.8705882353);
-}
-
-.loader {
-  color: #fff;
-  font-family: Consolas, Menlo, Monaco, monospace;
-  font-weight: bold;
-  font-size: 78px;
-  opacity: 0.8;
-  transition: 0.6s;
-}
-.loader:hover {
-  scale: 1.2;
-}
-.loader:before {
-  content: "{";
-  display: inline-block;
-  animation: pulse 0.7s alternate infinite ease-in-out;
-}
-.loader::after {
-  content: "}";
-  display: inline-block;
-  animation: pulse 0.7s 0.6s alternate infinite ease-in-out;
-}
-
-@keyframes pulse {
-  to {
-    transform: scale(0.8);
-    opacity: 0.5;
-  }
 }
 
 /*# sourceMappingURL=style-min.css.map */

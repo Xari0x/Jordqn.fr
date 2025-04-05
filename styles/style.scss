@@ -56,17 +56,6 @@ html {
     }
 }
 
-.text {
-    font-family: "Hanken Grotesk";
-    font-size: 20px;
-    font-weight: 100;
-    transition: .2s;
-
-    &:hover{
-        scale: 1.05;
-    }
-}
-
 .copyright {
     font-family: "Hanken Grotesk";
     opacity: 0.4;
@@ -82,65 +71,6 @@ html {
     
     &:hover{
         scale: 1.05;
-    }
-}
-
-.buttons {
-    width: 300px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-
-    a {
-        width: 120px;
-        height: 40px;
-        text-align: center;
-        line-height: 40px;
-        font-family: "Hanken Grotesk";
-        text-decoration: none;
-        color: #ffffffde;
-        border-radius: 10px;
-        border: 1px solid #ffffffde;
-        transition: .2s;
-
-        &:hover{
-            color: rgb(36, 36, 36);
-            background-color: #ffffffde;
-        }
-    }
-}
-
-.loader {
-    color: #fff;
-    font-family: Consolas, Menlo, Monaco, monospace;
-    font-weight: bold;
-    font-size: 78px;
-    opacity: 0.8;
-    transition: .6s;
-
-    &:hover{
-        scale: 1.2;
-    }
-
-    &:before{
-        content: "{";
-        display: inline-block;
-        animation: pulse 0.7s alternate infinite ease-in-out;
-    }
-
-    &::after{
-        content: "}";
-        display: inline-block;
-        animation: pulse 0.7s 0.6s alternate infinite ease-in-out;
-    }
-}
-
-@keyframes pulse {
-    to {
-        transform: scale(0.8);
-        opacity: 0.5;
     }
 }
       
