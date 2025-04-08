@@ -6,6 +6,7 @@
     -webkit-user-drag: none;
     -webkit-user-select: none;
     scroll-behavior: smooth !important;
+    // background-color: rgba(255, 0, 0, 0.24);
 }
 
 ::-webkit-scrollbar {
@@ -29,6 +30,7 @@
 html {
     width: 100%;
     height: 100%;
+    scroll-snap-type: y proximity;
 
     body {
         color: #ffffffde;
@@ -59,6 +61,7 @@ html {
                 height: 100vh;
                 justify-content: center;
                 align-items: center;
+                scroll-snap-align: start;
 
                 .card {
                     width: 300px;
@@ -318,7 +321,7 @@ html {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        padding: 5px 10px;
+                        padding: 10px 15px;
                         border-radius: 30px;
                         border: 1px solid rgba(255, 255, 255, 0.137);
                         transition: 2s;
@@ -345,28 +348,272 @@ html {
                         }
                     }
 
-                }
+                    .tw{
+                        margin-left: 53px;
+                        margin-bottom: 20px;
 
-                .arrow {
-                    position: absolute;
-                    filter: invert(1);
-                    bottom: 45px;
-                    
-                    img {
-                        opacity: 0.8;
-                        height: 40px;
+                        .typewriter {
+                            font-family: "Hanken Grotesk";
+                            position: relative;
+                            border-radius: 30px;
+                            padding: 5px 25px 5px 20px;
+                            border: 1px solid rgba(255, 255, 255, 0.137);
+                            background-color: rgba(255, 255, 255, 0.041);
+                            font-size: 13px;
+
+                            &::after{
+                                content: "";
+                                width: 2px;
+                                height: 13px;
+                                position: absolute;
+                                right: 21px;
+                                top: 7px;
+                                background: linear-gradient(
+                                    to right,
+                                    #7f43ff 10%,
+                                    #00ddfa 50%,
+                                    #7f43ff 90%
+                                );
+                                background-size: 500% auto;
+                                animation: typewriter .4s infinite alternate, textShine 10s ease-in-out infinite alternate;
+                            }
+                        }
                     }
-                    
                 }
             }
 
             .skills {
                 display: flex;
-                gap: 50px;
+                flex-direction: column;
+                gap: 15px;
                 width: 100%;
                 height: 100vh;
                 justify-content: center;
                 align-items: center;
+                scroll-snap-align: start;
+
+                .up-title{
+                    font-family: "Hanken Grotesk";
+                    position: relative;
+                    border-radius: 30px;
+                    background-color: #ffffff0a;
+                    color: #c5c5c5;
+                    padding: 5px 40px;
+                    font-size: 13px;
+                }
+
+                .title {
+                    font-family: "Hanken Grotesk";
+                    font-weight: 900;
+                    font-size: 30px;
+                    color: #f0f0f0c4;
+                }
+
+                .subtitle{
+                    font-weight: 200;
+                    width: 500px;
+                    font-size: 14px;
+                    font-family: "Montserrat";
+                    text-align: center;
+                }
+
+                .skills-container{
+                    display: flex;
+                    gap: 60px;
+                    margin-top: 40px;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+
+                    .skill{
+                        width: 320px;
+                        padding: 20px;
+                        position: relative;
+
+                        border-radius: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        transition: .2s;
+
+                        .card-bg {
+                            border: 1px solid #272727;
+                            border-radius: 10px;
+                            background-color: #222222;
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                            position: absolute;
+                            transition: .5s;
+                            top: 0;
+                            left: 0;
+                            z-index: -2;
+                            width: 100%;
+                            height: 100%;
+                            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    
+                            &::after{
+                                content: "";
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                filter: blur(50px);
+                                transition: 0.2s;
+                                z-index: -1;
+                                opacity: 0.1;
+                                bottom: 0px;
+                                left: 0;
+                                background: linear-gradient(
+                                    to right,
+                                    #7f43ff 10%,
+                                    #00ddfa 50%,
+                                    #7f43ff 90%
+                                );
+                                background-size: 500% auto;
+                                animation: textShine 10s ease-in-out infinite alternate;
+                            }
+                        }
+    
+                        .card-fg {
+                            border: 1px solid rgba(156, 156, 156, 0.466);
+                            border-radius: 10px;
+                            background-color: transparent;
+                            backdrop-filter: blur(0px);
+                            transition: .2s;
+                            position: absolute;
+                            transition: .5s;
+                            top: 0;
+                            left: 0;
+                            z-index: -1;
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        .app{
+                            width: 40px;
+                            padding: 10px;
+                            opacity: 0.9;
+                            background-color: rgba(255, 255, 255, 0.068);
+                            border-radius: 10px;
+                            transition: .2s;
+                        }
+
+                        .title{
+                            margin-top: 20px;
+                            font-size: 26px;
+                            font-weight: 900;
+                            font-family: "Hanken Grotesk";
+                        }
+
+                        p{
+                            width: 250px;
+                            height: 50px;
+                            font-weight: 300;
+                            margin-top: 10px;
+                            font-size: 13px;
+                            font-family: "Montserrat";
+                        }
+
+                        .tools{
+                            margin-top: 50px;
+                            border-top: 1px solid #e4e4e438;
+                            padding-top: 20px;
+                            display: flex;
+                            height: 65px;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                            .slot{
+                                font-family: "Hanken Grotesk";
+                                position: relative;
+                                border-radius: 30px;
+                                padding: 5px 15px;
+                                border: 1px solid rgba(255, 255, 255, 0.137);
+                                background-color: rgba(255, 255, 255, 0.041);
+                                font-size: 13px;
+                                display: flex;
+                                height: 16px;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                cursor: pointer;
+                                color: #f0f0f0c4;
+                                text-decoration: none;
+                                transition: .2s;
+
+                                &:hover{
+                                    background-color: rgba(255, 255, 255, 0.11);
+                                }
+
+                                .logo{
+                                    width: 15px;
+                                    margin-right: 10px;
+                                }
+                                .name{
+                                    font-size: 12px;
+                                    margin-top: 0px;
+                                }
+                            }
+                        }
+
+                        &:hover{
+                            scale: 1.05;
+
+                            .app{
+                                scale: 1.1;
+                            }
+    
+                            .card-bg{
+                                transform: rotate(-5deg);
+    
+                                &::after{
+                                    opacity: 0;
+                                }
+                            }
+    
+                            .card-fg{
+                                background-color: rgba(156, 156, 156, 0.123);
+                                backdrop-filter: blur(4px);
+                                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            .projects {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                scroll-snap-align: start;
+
+                .up-title{
+                    font-family: "Hanken Grotesk";
+                    position: relative;
+                    border-radius: 30px;
+                    background-color: #ffffff0a;
+                    color: #c5c5c5;
+                    padding: 5px 40px;
+                    font-size: 13px;
+                }
+
+                .title {
+                    font-family: "Hanken Grotesk";
+                    font-weight: 900;
+                    font-size: 30px;
+                    color: #f0f0f0c4;
+                }
+
+                .subtitle{
+                    font-weight: 200;
+                    width: 500px;
+                    font-size: 14px;
+                    font-family: "Montserrat";
+                    text-align: center;
+                }
+
             }
             
         }
@@ -408,7 +655,17 @@ html {
     100% {
       box-shadow: 0 0 0 6px #69ffa800;
     }
-  }
+}
+
+@keyframes typewriter {
+    0% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+}
 
 @media screen and (max-width: 80rem) {
     .container {
@@ -417,7 +674,7 @@ html {
 
             .card{
                 width: 250px !important;
-                margin-top: -90px;
+                margin-top: -30px;
 
                 .portrait{
                     width: 150px !important;
@@ -427,6 +684,11 @@ html {
 
             .text{
                 align-items: center;
+                width: 450px !important;
+
+                .tw{
+                    margin-left: 0 !important;
+                }
 
                 .title {
                     font-size: 30px !important;
@@ -446,6 +708,15 @@ html {
 
             .status {
                 margin-left: 0px !important;
+            }
+        }
+
+        .skills{
+            height: 210vh !important;
+
+            .skills-container{
+                flex-direction: column !important;
+                width: 370px !important;
             }
         }
     }
