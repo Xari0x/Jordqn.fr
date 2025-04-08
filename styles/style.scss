@@ -824,10 +824,6 @@ html {
     left: calc(50% - 150px);
     font-size: 15px;
     transition: .2s;
-    
-    &:hover{
-        scale: 1.05;
-    }
 }
 
 .message{
@@ -840,10 +836,6 @@ html {
     left: calc(50% - 150px);
     font-size: 15px;
     transition: .2s;
-    
-    &:hover{
-        scale: 1.05;
-    }
 }
 
 @keyframes textShine {

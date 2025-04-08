@@ -686,9 +686,6 @@ html body .container .footer {
   font-size: 15px;
   transition: 0.2s;
 }
-.copyright:hover {
-  scale: 1.05;
-}
 
 .message {
   font-family: "Hanken Grotesk";
@@ -699,9 +696,6 @@ html body .container .footer {
   left: calc(50% - 150px);
   font-size: 15px;
   transition: 0.2s;
-}
-.message:hover {
-  scale: 1.05;
 }
 
 @keyframes textShine {
